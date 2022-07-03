@@ -7,8 +7,6 @@
      let feedback = [];
 </script>
 
-<h1>Feedback</h1> 
-
 {#each feedback as item (item.id)}
    <FeedbackItem  item={item} on:delete-feedback/>
    <!-- <p>{item.text}</p> -->
