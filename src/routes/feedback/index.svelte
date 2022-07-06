@@ -25,6 +25,12 @@
 
   $: count =feedback.length
   $: average = feedback.reduce((a,{rating})=>a+rating,0) / feedback.length
+ 
+  const addFeedback = (/** @type {{ detail: any; }} */ e) =>{
+       const newFeedback =e.detail
+       feedback = [newFeedback,...feedback]
+      // console.log(e.detail)
+  }
 
   const deleteFeedback = (/** @type {{ detail: any; }} */ e)=>{
      const itemID = e.detail
@@ -34,6 +40,6 @@
 </script>
 <main class="container">
   <FeedbackStatus  {count} {average} />  
-  <FeedbackForm />
+  <FeedbackForm on:add-feedback={addFeedback} />
 <FeedbackList {feedback} on:delete-feedback={deleteFeedback} />
 </main>

@@ -3,7 +3,10 @@
     import Card from "./Card.svelte";
     import Button from "./Button.svelte"
     import RatingSelect from "./RatingSelect.svelte"
+    import {createEventDispatcher} from 'svelte'
     
+   const dispatch = createEventDispatcher()
+
     let text =''
     let rating = 5
     let btnDisabled =true
@@ -34,7 +37,7 @@
                 text,
                 rating : + rating
             }
-            console.log(newFeedback)
+            dispatch('add-feedback',newFeedback)
         }
         
     }
