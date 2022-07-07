@@ -12,7 +12,7 @@ import Card from "../componets/Card.svelte";
   //const dispatch = createEventDispatcher()
   const handleDelete =(/** @type {any} */ itemID) =>{
     FeedbackStore.update((currentFeeback)=>{
-      return currentFeeback.filter(item=>itemID !=itemID)
+      return currentFeeback.filter(item=>item.id !=itemID)
     })
     //dispatch('delete-feedback',itemID)
   }

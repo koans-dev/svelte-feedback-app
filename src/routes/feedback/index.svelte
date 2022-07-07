@@ -4,9 +4,6 @@
   import FeedbackList from "../componets/FeedbackList.svelte";
   import FeedbackStatus from "../componets/FeedbackStatus.svelte";
  
-
-   
-
    // Removed because of using store
 
   // const addFeedback = (/** @type {{ detail: any; }} */ e) =>{
@@ -24,5 +21,5 @@
 <main class="container">
   <FeedbackStatus />  
   <FeedbackForm   />
-<FeedbackList   />
+  <FeedbackList   />
 </main>
