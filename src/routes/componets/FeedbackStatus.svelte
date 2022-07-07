@@ -1,12 +1,11 @@
 <script>
-  export /**
-   * @type {any}
-   */
-  let count;
-  export /**
-   * @type {any}
-   */
-  let average;
+  import {FeedbackStore} from '../stores/store'
+  
+
+  $: count =$FeedbackStore.length
+  $: average = $FeedbackStore.reduce((a,{rating})=>a+rating,0) / $FeedbackStore.length
+
+
 </script>
 
 <div class="feedback-stats">

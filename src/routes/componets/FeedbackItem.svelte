@@ -1,16 +1,20 @@
 <script>
- 
+import {FeedbackStore} from '../stores/store'
 import Card from "../componets/Card.svelte";
-import {createEventDispatcher} from 'svelte'
+
+//import {createEventDispatcher} from 'svelte'
 
   // your script goes here
   export /**
    * @type {{ rating: any; text:any; id:any }}
    */
   let item;
-  const dispatch = createEventDispatcher()
+  //const dispatch = createEventDispatcher()
   const handleDelete =(/** @type {any} */ itemID) =>{
-    dispatch('delete-feedback',itemID)
+    FeedbackStore.update((currentFeeback)=>{
+      return currentFeeback.filter(item=>itemID !=itemID)
+    })
+    //dispatch('delete-feedback',itemID)
   }
 </script>
 

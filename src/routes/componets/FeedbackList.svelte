@@ -1,15 +1,23 @@
 <script>
+ 
+    import { FeedbackStore } from '../stores/store'; 
     import {fade ,scale} from 'svelte/transition'
     import FeedbackItem from "../componets/FeedbackItem.svelte";
-    export /**
-* @type {any[]}
-*/
-     let feedback = [];
+ 
+//     export /**
+// * @type {any[]}
+// */
+//      let feedback = [];
+
+//       FeedbackStore.subscribe((data)=> feedback = data) 
+      
+      
+
 </script>
 
-{#each feedback as item (item.id)}
+{#each $FeedbackStore as item (item.id)}
    <div transition:fade>
-    <FeedbackItem  item={item} on:delete-feedback/>
+    <FeedbackItem  item={item} />
    </div>
  
    <!-- <p>{item.text}</p> -->
