@@ -1,18 +1,9 @@
-# create-svelte explor by creating feedback app
+# create-svelte explore by creating feedback app
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
-```
+ 
+ ## Screenshot 
+ ![feedback_app](https://user-images.githubusercontent.com/8409012/178138200-dfc78357-3b62-428a-bc53-19a29e76ed96.jpeg)
+ 
 
 ## Developing
 
